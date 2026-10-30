@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>프롬프트 팔이 소녀 — 오늘의 새로운 나</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#472a27;background:#fffaf0}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 52% 15%,#fffdf4 10%,#ffecbf 85%);overflow-x:hidden}.lang{position:fixed;top:18px;right:18px;z-index:30;display:flex;border:3px solid #743d36;border-radius:28px;background:#fff9e9;padding:3px;box-shadow:0 4px 0 #d3a57c}.lang button{border:0;background:transparent;color:#764d3c;font-weight:900;padding:7px 12px;border-radius:18px;cursor:pointer}.lang button.active{background:#e94d35;color:white}.main{max-width:850px;margin:auto;padding:54px 18px 75px;text-align:center}h1{font-size:clamp(25px,4vw,40px);margin:0 0 18px;letter-spacing:-.06em;color:#b73526;text-shadow:2px 2px 0 #ffe0a7}.lead{font-size:clamp(15px,2vw,18px);line-height:1.55;font-weight:700;margin:10px 0}.lead2{margin-top:16px}.machine-area{height:clamp(580px,85vw,690px);display:flex;justify-content:center;align-items:start;margin-top:6px;position:relative}.machine{position:relative;width:390px;height:645px;transform-origin:top center;transform:scale(var(--machine-scale,1));filter:drop-shadow(0 17px 5px #93502a25)}.top-stem{position:absolute;top:0;left:50%;width:65px;height:37px;transform:translateX(-50%);border:5px solid #742d26;background:linear-gradient(#ff9a5e,#ed4133);border-radius:42px 42px 8px 8px;z-index:7}.lid{position:absolute;top:26px;left:10px;width:370px;height:72px;border:6px solid #812c25;border-radius:50% 50% 13% 13% / 72% 72% 35% 35%;background:linear-gradient(175deg,#ff9273,#ec382d 55%,#b82221);box-shadow:inset 7px 9px 0 #ffffff55,0 6px 0 #a52b22;z-index:6}.lid:after{content:'';position:absolute;left:32px;right:32px;top:10px;height:9px;border-radius:80%;background:#ffc6a1aa}.dome{position:absolute;top:70px;left:27px;width:336px;height:335px;border:7px solid #77322c;border-radius:39% 39% 42% 42% / 22% 22% 22% 22%;background:linear-gradient(110deg,#a8e9f3aa 0%,#d7ffff78 35%,#9fd7e3aa 72%,#b8e8f099);overflow:hidden;box-shadow:inset 14px 4px 15px #fff9,inset -20px 0 17px #3e95a144;z-index:2}.dome:after{content:'';position:absolute;top:16px;left:20px;width:40px;height:235px;background:#ffffff80;border-radius:50%;transform:rotate(6deg);pointer-events:none;z-index:4}.capsule-pile{position:absolute;inset:0}.mini{position:absolute;width:79px;height:79px;border:4px solid #65515b;border-radius:50%;background:linear-gradient(to bottom,#ffffffb0 0 49%,var(--ball) 50%);box-shadow:inset -8px -7px 10px #0002,inset 9px 4px 8px #fff9,0 3px 4px #0002;transform:rotate(var(--tilt));overflow:hidden}.mini:after,.draw-ball:after{content:'';position:absolute;top:48%;height:5px;width:100%;left:0;background:#fff9;border-top:1px solid #64535a55}.tiny-self{position:absolute;left:50%;top:13px;transform:translateX(-50%);height:51px;width:43px;animation:jump .95s ease-in-out infinite;z-index:0}.head{position:absolute;width:22px;height:23px;background:#41383e;border-radius:48%;top:0;left:10px}.head:before,.head:after{content:'';position:absolute;top:11px;width:3px;height:3px;border-radius:50%;background:#fff}.head:before{left:6px}.head:after{right:6px}.torso{position:absolute;top:20px;left:15px;width:14px;height:21px;border-radius:8px;background:#41383e}.leg{position:absolute;top:36px;width:7px;height:15px;background:#41383e;border-radius:6px}.leg.left{left:15px;transform:rotate(9deg)}.leg.right{left:24px;transform:rotate(-9deg)}.arm{position:absolute;top:22px;width:7px;height:21px;background:#41383e;border-radius:6px;transform-origin:center 3px}.arm.left{left:12px;animation:wave-left .65s ease-in-out infinite alternate}.arm.right{left:27px;animation:wave-right .65s ease-in-out infinite alternate}@keyframes jump{0%,100%{transform:translate(-50%,5px) scaleY(.95)}55%{transform:translate(-50%,-4px) scaleY(1.04)}}@keyframes wave-left{from{transform:rotate(37deg)}to{transform:rotate(127deg)}}@keyframes wave-right{from{transform:rotate(-37deg)}to{transform:rotate(-127deg)}}.machine-body{position:absolute;top:372px;left:20px;width:350px;height:250px;background:linear-gradient(115deg,#ff6d52 0%,#e43c30 48%,#b52d27 100%);border:7px solid #772c25;border-radius:34px 34px 42px 42px;box-shadow:inset 15px 4px #ffc0a363,inset -10px 0 #90271b33;z-index:3}.knob-pad{position:absolute;top:55px;left:28px;width:150px;height:147px;border:6px solid #812d28;border-radius:26px;background:linear-gradient(#fff6cb,#f3bd72);box-shadow:inset 0 5px #fff9,5px 7px 0 #9f291b6b}.knob{position:absolute;left:22px;top:23px;width:96px;height:96px;border:7px solid #8b4428;border-radius:50%;background:radial-gradient(circle at 34% 26%,#ffe997,#ffba2c 55%,#df871c 100%);box-shadow:inset 5px 5px 5px #fff9,0 7px 0 #a76122;cursor:grab;touch-action:none;user-select:none;display:grid;place-items:center;outline-offset:5px}.knob:active{cursor:grabbing}.knob:focus-visible{outline:3px solid #fff}.knob-handle{width:24px;height:74px;border-radius:13px;background:linear-gradient(90deg,#f6c753,#d98b16,#ffe38a);border:4px solid #9b5d18;box-shadow:none;pointer-events:none;transform:rotate(0deg);transform-origin:50% 50%;will-change:transform}.knob-arrow{position:absolute;right:-32px;top:-12px;font-size:35px;color:#fff6c3;font-weight:900;text-shadow:2px 3px #7b2923;pointer-events:none}.knob-hint{position:absolute;bottom:3px;width:100%;text-align:center;color:#873b20;font-weight:1000;font-size:13px;pointer-events:none}.output{position:absolute;top:76px;right:23px;width:113px;height:122px;border:8px solid #7c2e29;border-radius:25px 25px 34px 34px;background:linear-gradient(#661c1e,#3c2125);box-shadow:inset 0 13px 20px #0007,0 6px #9f271e;overflow:hidden}.output:before{content:'';position:absolute;top:8px;left:10px;right:10px;height:15px;border-bottom:2px solid #ffffff33;border-radius:50%}.output-door{position:absolute;bottom:0;left:0;width:100%;height:42px;border-top:6px solid #e4ae6e;background:linear-gradient(#d24435,#89251f);border-radius:45% 45% 0 0;display:none!important}.base{position:absolute;top:605px;left:0;width:390px;height:28px;border:6px solid #743128;background:linear-gradient(#f87b56,#c5342d);border-radius:13px;z-index:4}.instructions{margin:6px auto 0;font-size:15px;font-weight:800;color:#954334}.instructions small{display:block;color:#a97455;font-size:12px;margin-top:9px;font-weight:600}.overlay{position:fixed;inset:0;background:#3b2136a8;display:none;align-items:center;justify-content:center;z-index:40;padding:20px;backdrop-filter:blur(5px)}.overlay.show{display:flex}.scene{width:min(540px,95vw);height:min(640px,89vh);position:relative;display:flex;align-items:center;justify-content:center}.draw-ball{width:104px;height:104px;border:5px solid #64505b;border-radius:50%;background:linear-gradient(to bottom,#d8fbffe3 0 49%,var(--ball,#ffc36c) 50%);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.18);box-shadow:inset -14px -12px 18px #0002,inset 12px 9px 15px #fff8,0 17px 35px #0004;overflow:hidden;opacity:0}.draw-ball.visible{opacity:1}.draw-ball.grow{transition:transform 1.35s cubic-bezier(.16,.8,.22,1);transform:translate(-50%,-50%) scale(2.35)}.shell{position:absolute;width:240px;height:240px;top:50%;left:50%;transform:translate(-50%,-50%);display:none;pointer-events:none}.shell.show{display:block}.half{position:absolute;left:0;width:240px;height:120px;border:6px solid #73535a;box-shadow:inset 13px 10px 22px #fff8,0 10px 20px #0003}.half.top{top:0;border-radius:130px 130px 8px 8px;background:#d8fbffee;transform-origin:bottom;animation:open-top .7s ease-out forwards}.half.bottom{bottom:0;border-radius:8px 8px 130px 130px;background:var(--ball,#ffc36c);transform-origin:top;animation:open-bottom .7s ease-out forwards}@keyframes open-top{to{transform:translateY(-88px) rotate(-14deg);opacity:.65}}@keyframes open-bottom{to{transform:translateY(105px) rotate(10deg);opacity:.65}}.ticket{position:relative;z-index:2;width:min(450px,92vw);max-height:83vh;overflow:auto;border:5px solid #8a4935;background:#fff9e7;border-radius:18px;padding:26px 22px;box-shadow:0 13px 0 #c88a57,0 25px 50px #0006;display:none;animation:paper .65s cubic-bezier(.18,1.2,.35,1)}.ticket.show{display:block}@keyframes paper{from{transform:scale(.15) translateY(50px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}.ticket h2{font-size:23px;color:#ba4430;margin:7px 0 16px}.ticket h3{margin:7px 0;color:#5e3c31}.ticket p{text-align:left;white-space:pre-wrap;line-height:1.6;font-size:14px}.ticket button{border:3px solid #853726;background:#f1c858;border-radius:16px;padding:12px 18px;color:#5b3425;font-size:16px;font-weight:900;cursor:pointer;margin:6px}.ticket button:hover{filter:brightness(1.05)}.close{position:absolute;right:8px;top:8px;background:#fff!important;border:0!important;padding:4px 10px!important}.footer{font-size:12px;opacity:.7;margin-top:30px}.loading-note{display:none;color:white;font-size:15px;font-weight:800;position:absolute;top:73%;text-shadow:1px 2px #3a2932}.loading-note.show{display:block}@media(max-width:600px){.main{padding-top:65px}.machine-area{height:525px}.machine{--machine-scale:.78}.lead{font-size:14px}}@media(max-width:420px){.machine-area{height:470px}.machine{--machine-scale:.67}.main{padding-left:8px;padding-right:8px}}
+
+/* Vivid toy-shop palette: bold primary red, cobalt, lemon, aqua and green. */
+:root {color:#173a7a;background:#d4f8ff}
+body {background:
+  radial-gradient(circle at 6% 44%,#fff45a 0 13px,transparent 14px),
+  radial-gradient(circle at 94% 41%,#ff6387 0 10px,transparent 11px),
+  radial-gradient(circle at 8% 77%,#38d96b 0 9px,transparent 10px),
+  radial-gradient(circle at 94% 90%,#277af9 0 12px,transparent 13px),
+  radial-gradient(ellipse at 50% 17%,#fffde3 0%,#d6f9ff 58%,#9be7ff 100%)}
+.main {position:relative}
+h1 {color:#fa2949;text-shadow:3px 3px 0 #fff36d}
+.lead {color:#173a7a}
+.lang {border-color:#19408a;background:#fff;border-radius:28px;box-shadow:0 5px 0 #6bafee}
+.lang button {color:#16458a}
+.lang button.active {background:#1269ff;color:#fff}
+.machine {filter:drop-shadow(0 17px 7px #1c59a93b)}
+.top-stem {border-color:#163c86;background:linear-gradient(#ffe83c,#f9ab0b)}
+.lid {border-color:#193e88;background:linear-gradient(175deg,#ff916a 1%,#fa304b 46%,#ef1242 100%);box-shadow:inset 7px 9px 0 #ffffff75,0 6px 0 #b31e43}
+.lid:after {background:#fff4b3ac}
+.dome {border-color:#194a93;background:linear-gradient(110deg,#77ecffb0,#efffff7d 36%,#28d0ff99 76%,#85f8ff9c);box-shadow:inset 14px 4px 15px #fff9,inset -20px 0 17px #1685da55}
+.mini {border-color:#1b5298;box-shadow:inset -8px -7px 10px #0002,inset 9px 4px 8px #fff9,0 3px 4px #1f5eab44}
+.mini:after,.draw-ball:after {border-top-color:#2054a655}
+.head,.torso,.leg,.arm {background:#173d81}
+.machine-body {border-color:#153e8a;background:linear-gradient(115deg,#ff8065 0%,#ff364c 48%,#f20d42 100%);box-shadow:inset 15px 4px #ffd9a080,inset -10px 0 #9b174633}
+
+.knob-pad {border-color:#173e8b;background:linear-gradient(#fffca0,#ffde22);box-shadow:inset 0 5px #fff9,5px 7px 0 #bc24496b}
+.knob {border-color:#154d98;background:radial-gradient(circle at 34% 26%,#fff8ab,#ffdf29 55%,#ffb711 100%);box-shadow:inset 5px 5px 5px #fff9,0 7px 0 #ae7212}
+.knob-handle {border-color:#12559a;background:linear-gradient(90deg,#fff581,#ffb910,#fff765);box-shadow:2px 2px 0 #12559a}
+.knob-arrow {color:#fff62b;text-shadow:2px 3px #18488d}
+.knob-hint {color:#114b95}
+.output {border-color:#19498b;background:linear-gradient(#102e68,#1a60ba);box-shadow:inset 0 13px 20px #0005,0 6px #9e1641}
+.output-door {border-top-color:#ffdf25;background:linear-gradient(#ff754c,#f3244b)}
+.base {border-color:#18428e;background:linear-gradient(#ff8d67,#ff294c)}
+.instructions {color:#184994}
+.instructions small {color:#2768a7}
+.footer {color:#34659b;opacity:.9}
+.overlay {background:#2160aec2;backdrop-filter:blur(5px)}
+.draw-ball {border-color:#1c529e}
+.half {border-color:#2155a0}
+.ticket {border-color:#174eab;background:#fffefa;box-shadow:0 13px 0 #ffcb19,0 25px 50px #123d7770}
+.ticket h2 {color:#f42550}
+.ticket h3 {color:#1652aa}
+.ticket p {color:#1b3d77}
+.ticket button {border-color:#18509e;background:#ffe631;color:#123f85}
+.ticket .close {color:#184d9a}
+.loading-note {color:white;text-shadow:1px 2px #1751a5}
+@keyframes shake {0%,100%{transform:translateX(0) rotate(0deg)}25%{transform:translateX(-3px) rotate(-1deg)}75%{transform:translateX(3px) rotate(1deg)}}
+/* Slower capsule opening and paper reveal, 40% of previous playback speed. */
+.draw-ball.grow {transition-duration:3.375s}
+.half.top {animation-duration:1.75s}
+.half.bottom {animation-duration:1.75s}
+.ticket {animation-duration:1.625s}
+@media (prefers-reduced-motion: reduce) {
+  .tiny-self,.arm {animation-duration:2s}
+}
+
+
+/* Continuous physical dispensing sequence: a capsule drops through the glass
+   chamber, enters the hatch, falls out and bounces before it enlarges. */
+.knob-arrow,.knob-hint{display:none!important}
+.drop-capsule,.exit-ball{position:absolute;border:4px solid #1b5298;border-radius:50%;background:linear-gradient(to bottom,#d8fbffe3 0 49%,var(--ball,#ffde22) 50%);box-shadow:inset -7px -7px 11px #0002,inset 7px 5px 8px #fff9,0 4px 8px #0b3b8550;pointer-events:none}
+.drop-capsule::after,.exit-ball::after{content:"";position:absolute;left:0;top:48%;width:100%;height:4px;background:#fff9;border-top:1px solid #2054a655}
+.drop-capsule{top:81px;left:142px;width:72px;height:72px;z-index:3;opacity:0}
+.drop-capsule.falling{animation:fall-through-dome 1.7s cubic-bezier(.22,.32,.64,1) both}
+@keyframes fall-through-dome{
+  0%{opacity:0;transform:translate(0,-27px) rotate(-12deg) scale(.94)}
+  13%{opacity:1;transform:translate(-8px,0) rotate(7deg) scale(.94)}
+  35%{opacity:1;transform:translate(16px,56px) rotate(42deg)}
+  59%{opacity:1;transform:translate(-3px,112px) rotate(75deg)}
+  80%{opacity:1;transform:translate(37px,162px) rotate(121deg)}
+  100%{opacity:0;transform:translate(54px,245px) rotate(154deg) scale(.87)}
+}
+.exit-ball{width:66px;height:66px;top:-73px;left:15px;z-index:1;opacity:0;transform:translateY(0) rotate(-22deg)}
+.exit-ball.release{opacity:1;transform:translateY(101px) rotate(68deg);transition:transform 1.15s cubic-bezier(.28,.15,.48,1),opacity .15s ease}
+.output-door{z-index:2;transition:transform .55s cubic-bezier(.18,.68,.25,1)}
+.output-door.open{transform:translateY(45px)}
+.overlay{background:transparent;backdrop-filter:none;transition:background 1.1s ease,backdrop-filter 1.1s ease}
+.overlay.focus{background:#2160aec2;backdrop-filter:blur(5px)}
+.draw-ball{will-change:left,top,transform;transform-origin:center center}
+@media(prefers-reduced-motion:reduce){.drop-capsule.falling{animation-duration:1.7s}}
+
+/* Glass face in front of the little person — scoped to that capsule only. */
+.mini:has(> .tiny-self)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(226, 249, 255, .34) 0%,
+    rgba(226, 249, 255, .16) 47%,
+    var(--ball) 50%);
+}
+.mini:has(> .tiny-self)::after { z-index: 3; }
+</style>
+<style id="bubble-ad-style">
+/* BACKGROUND BUBBLE ADS ONLY — original gacha code is locked. */
+/* Anchor the bubbles to the page, not the viewport, so they scroll normally. */
+body { position: relative; }
+#bubble-ad-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: layout paint;
+}
+/* Keep all pre-existing content and controls in front of the background. */
+body > main.main { z-index: 1; }
+.bb-float {
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
+  will-change: transform;
+  animation: bb-float-path var(--bb-duration) ease-in-out both;
+}
+.bb-shell {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1.8px solid rgba(255,255,255,.88);
+  background: radial-gradient(ellipse at 29% 22%, rgba(255,255,255,.8) 0%, transparent 25%),
+     radial-gradient(ellipse at 75% 85%, var(--bb-tint) 0%, transparent 66%),
+     radial-gradient(circle at 48% 45%,rgba(255,255,255,.28),rgba(255,255,255,.48) 66%,rgba(255,255,255,.25) 100%);
+  box-shadow: inset 5px 6px 12px rgba(255,255,255,.74),
+    inset -7px -9px 16px var(--bb-tint),
+    0 6px 20px rgba(45,100,173,.13),
+    0 0 0 1px var(--bb-rim);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+.bb-shell::before {
+  content: '';
+  position: absolute;
+  top: 12%; left: 18%;
+  width: 33%; height: 18%;
+  border-radius: 50%;
+  background: rgba(255,255,255,.77);
+  transform: rotate(-36deg);
+  filter: blur(1px);
+}
+.bb-shell::after {
+  content: '';
+  position: absolute;
+  right: 10%; bottom: 14%;
+  width: 32%; height: 19%;
+  border-radius: 50%;
+  border-bottom: 3px solid rgba(255,255,255,.75);
+  transform: rotate(-37deg);
+}
+.bb-title {
+  position: relative;
+  z-index: 1;
+  width: 83%;
+  margin: 0;
+  color: #235583;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 850;
+  letter-spacing: -.045em;
+  font-size: clamp(10px, var(--bb-type-size), 16px);
+  line-height: 1.25;
+  text-align: center;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  text-shadow: 0 1px 0 #fff, 0 1px 5px #ffffffa8;
+}
+.bb-shell.bb-popping { animation: bb-pop .48s cubic-bezier(.13,.69,.3,1) forwards; }
+.bb-spark {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--bb-rim);
+  opacity: 0;
+  animation: bb-spark .55s ease-out forwards;
+}
+@keyframes bb-float-path {
+  0%   { transform: translate3d(0, 0, 0) rotate(-5deg) scale(.83); opacity: 0; }
+  10%  { opacity: .88; }
+  42%  { transform: translate3d(calc(var(--bb-x) * .37), calc(var(--bb-y) * .46), 0) rotate(4deg) scale(1.015); opacity: .94; }
+  77%  { opacity: .93; }
+  100% { transform: translate3d(var(--bb-x),var(--bb-y),0) rotate(-3deg) scale(1); opacity: .84; }
+}
+@keyframes bb-pop {
+  0%   { transform: scale(1); opacity: 1; }
+  30%  { transform: scale(1.13); opacity: 1; }
+  54%  { transform: scale(.96); opacity: .95; }
+  100% { transform: scale(1.31); opacity: 0; }
+}
+@keyframes bb-spark {
+  0%   { transform: translate(-50%,-50%) scale(.5); opacity: .95; }
+  100% { transform: translate(calc(-50% + var(--sx)),calc(-50% + var(--sy))) scale(.2); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-float { animation: bb-float-path var(--bb-duration) linear both; }
+  .bb-shell.bb-popping { animation: bb-pop .75s ease-out forwards; }
+}
+</style>
+</head>
+<body>
+<div id="bubble-ad-layer" aria-hidden="true"></div>
+
+<div class="lang"><button id="kr" class="active">KR</button><button id="en">EN</button></div>
+<main class="main"><h1 id="title">프롬프트 팔이 소녀</h1><p class="lead" id="lead1">누군가 작은 유리공 안에서 당신을 기다리고 있어요.</p><p class="lead lead2" id="lead2">오늘은 아직 만나지 못한 새로운 나를 발견해 보세요.</p>
+<div class="machine-area"><div class="machine" id="machine"><div class="top-stem"></div><div class="lid"></div><div class="dome"><div class="capsule-pile" id="pile"></div><div class="drop-capsule" id="dropCapsule" aria-hidden="true"></div></div><div class="machine-body"><div class="knob-pad"><div class="knob" id="knob" role="button" tabindex="0" aria-label="손잡이를 시계 방향으로 돌려 캡슐 뽑기"><div class="knob-handle"></div></div></div><div class="output" id="output"><div class="exit-ball" id="exitBall" aria-hidden="true"></div><div class="output-door" id="outputDoor"></div></div></div><div class="base"></div></div></div>
+<div class="instructions" id="instruction">노란 손잡이를 잡고 시계 방향으로 돌려보세요.<small>마우스 또는 손가락으로 직접 돌릴 수 있어요.</small></div><div class="footer">Little Prompt Girl · Demo — 아직 결제 기능은 연결되지 않았어요.</div></main>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="뽑기 결과"><div class="scene"><div class="draw-ball" id="drawBall"></div><div class="shell" id="shell"><div class="half top"></div><div class="half bottom"></div></div><div class="loading-note" id="loadingNote">A NEW YOU IS COMING...</div><div class="ticket" id="ticket"><button class="close" id="close" aria-label="닫기">×</button><h2>A NEW YOU DISCOVERED</h2><h3 id="resultTitle"></h3><p id="resultPrompt"></p><button id="copy">프롬프트 복사</button><button id="again">다시 뽑기</button></div></div></div>
+<script>
+const translations={kr:{title:'프롬프트 팔이 소녀',lead1:'누군가 작은 유리공 안에서 당신을 기다리고 있어요.',lead2:'오늘은 아직 만나지 못한 새로운 나를 발견해 보세요.',instruction:'노란 손잡이를 잡고 시계 방향으로 돌려보세요.<small>마우스 또는 손가락으로 직접 돌릴 수 있어요.</small>',copy:'프롬프트 복사',again:'다시 뽑기',copied:'복사했어요!',close:'닫기'},en:{title:'THE LITTLE PROMPT GIRL',lead1:'Someone is waiting for you inside a tiny glass capsule.',lead2:'Discover a version of yourself you have never met.',instruction:'Turn the yellow handle clockwise.<small>Drag with your mouse or finger.</small>',copy:'COPY PROMPT',again:'DRAW AGAIN',copied:'COPIED!',close:'Close'}};
+const prompts=[{name:'THE UNBORN ME',ko:'내가 아직 만나지 못한 나',promptKo:`당신이 접근할 수 있는 나와의 이전 대화 및 저장된 기억을 활용해 내가 아직 시도하지 않은 삶의 가능성을 탐색해 주세요. 실제 대화에서 확인된 사실과 추론을 명확히 구분해 주세요.\n\n1. 나의 반복되는 가치관과 선택 패턴을 근거와 함께 3개 제시해 주세요.\n2. 내가 아직 충분히 탐색하지 않은 가능성 1개를 상상력 있게 제안해 주세요.\n3. 그 가능성을 가진 '또 다른 나'와 대화하는 역할극을 진행해 주세요.\n4. 7일 동안 안전하고 현실적으로 실험할 행동을 제안해 주세요.\n기억이 부족하다면 결론을 지어내지 말고 나에게 질문 3개부터 해 주세요.`,promptEn:`Use only the conversation history and saved memories actually available to you to help me discover a version of myself I have not yet explored. Separate observed facts from interpretations. Identify three recurring patterns with supporting evidence, imagine one overlooked possibility, guide a role-play with that alternate self, and suggest a realistic seven-day experiment. If you lack enough context, ask three questions before making claims.`},{name:'THE BRAVE ME',ko:'용감한 나',promptKo:`당신이 실제로 접근할 수 있는 내 대화와 기억을 참고해 내가 두려움 때문에 미뤄온 도전들을 살펴봐 주세요. 나를 단정하거나 심리 진단하지 말고 사실과 추론을 구분해 주세요. 가장 작은 도전 하나를 골라 실행 가능한 단계 5개와 그날 사용할 용기 있는 자기 대화 문장을 만들어 주세요. 정보가 부족하면 먼저 질문하세요.`,promptEn:`Use what you can actually access from our conversations and memories to explore a challenge I may have avoided because of fear. Do not diagnose me. Distinguish observations from guesses. Help me choose one small brave step, build a five-step plan, and write a compassionate self-talk script. Ask questions if needed.`},{name:'THE CREATIVE ME',ko:'창작하는 나',promptKo:`우리의 실제 대화 기록과 접근 가능한 기억을 기반으로 나의 호기심, 취향, 표현 방식을 살펴봐 주세요. 근거와 추측을 구분한 뒤, 아직 시도하지 않은 창작 프로젝트 세 가지를 제안하고 가장 작은 20분짜리 첫 작업을 만들어 주세요. 기억이 충분하지 않다면 취향을 확인할 질문부터 해 주세요.`,promptEn:`Based on the conversations and memories you can actually access, explore my curiosity, tastes, and creative instincts. Separate evidence from speculation. Suggest three small creative projects I have not tried and design a 20-minute first session. If context is limited, ask questions.`},{name:'THE FREE ME',ko:'자유로운 나',promptKo:`당신이 접근 가능한 나와의 과거 대화에서 나에게 중요한 의무, 안정감, 자유의 의미를 살펴봐 주세요. 확인된 내용과 추론을 구분하세요. 나의 현실적인 책임을 존중하면서 작은 자유를 늘릴 수 있는 방법 다섯 가지를 제안하고, 그중 하나를 이번 주에 실험하도록 도와주세요.`,promptEn:`Use our actually accessible conversation context to explore what freedom, security, and responsibility mean to me. Separate known facts from interpretations. Suggest five realistic ways to experience a little more freedom while honoring my obligations, and help me test one this week.`}];
+let language='kr';const $=id=>document.getElementById(id);function setLanguage(lang){language=lang;let t=translations[lang];for(const id of ['title','lead1','lead2'])$(id).textContent=t[id];$('instruction').innerHTML=t.instruction;$('copy').textContent=t.copy;$('again').textContent=t.again;$('close').setAttribute('aria-label',t.close);$('kr').classList.toggle('active',lang==='kr');$('en').classList.toggle('active',lang==='en');if(currentResult)renderResult(currentResult)}$('kr').onclick=()=>setLanguage('kr');$('en').onclick=()=>setLanguage('en');
+const colors=['#ffdb20','#ff3c62','#2690ff','#2bdc76','#b144ff','#ff8428','#ffed27','#13d7e9'];const placements=[[6,67,-20],[25,75,25],[47,73,-15],[70,70,18],[0,47,15],[23,46,-20],[46,48,30],[72,46,-14],[6,23,-15],[29,24,20],[52,24,-17],[74,20,22],[12,3,5],[35,5,-20],[58,3,14],[75,1,-15],[16,82,22],[56,83,-22]];for(let i=0;i<placements.length;i++){const [x,y,r]=placements[i],el=document.createElement('div');el.className='mini';el.style.left=x+'%';el.style.top=y+'%';el.style.setProperty('--tilt',r+'deg');el.style.setProperty('--ball',colors[i%colors.length]);if(i===9){el.innerHTML='<div class="tiny-self"><div class="head"></div><div class="torso"></div><div class="arm left"></div><div class="arm right"></div><div class="leg left"></div><div class="leg right"></div></div>';} $('pile').appendChild(el)}
+const knob=$('knob'),knobHandle=knob.querySelector('.knob-handle');let dragging=false,last=0,progress=0,angle=0,busy=false,pid=null;const limit=550,triggerAt=540;function pointAngle(e){const r=knob.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return Math.atan2(e.clientY-y,e.clientX-x)*180/Math.PI}function rotateHandle(deg){knobHandle.style.transform=`rotate(${deg}deg)`}function endDrag(){if(!dragging)return;dragging=false;if(pid!==null){try{knob.releasePointerCapture(pid)}catch(e){}}pid=null;knobHandle.style.transition='transform 350ms cubic-bezier(.2,.8,.2,1)';angle=progress=0;rotateHandle(0)}knob.addEventListener('pointerdown',e=>{if(busy)return;e.preventDefault();knobHandle.style.transition='none';dragging=true;pid=e.pointerId;last=pointAngle(e);progress=angle;knob.setPointerCapture(e.pointerId)});knob.addEventListener('pointermove',e=>{if(!dragging||busy)return;const current=pointAngle(e);let delta=((current-last+540)%360)-180;last=current;progress=Math.max(0,Math.min(limit,progress+delta));angle=progress;rotateHandle(angle);if(progress>=triggerAt){endDrag();draw()}});knob.addEventListener('pointerup',endDrag);knob.addEventListener('pointercancel',endDrag);knob.addEventListener('keydown',e=>{if(busy)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();draw()}else if(e.key==='ArrowRight'){e.preventDefault();progress=Math.min(triggerAt,progress+45);rotateHandle(progress);if(progress>=triggerAt){progress=0;draw();setTimeout(()=>rotateHandle(0),350)}}});
+let currentResult=null;const wait=ms=>new Promise(r=>setTimeout(r,ms));function renderResult(r){$('resultTitle').textContent=language==='kr'?r.ko:r.name;$('resultPrompt').textContent=language==='kr'?r.promptKo:r.promptEn}$('close').onclick=reset;$('again').onclick=()=>{reset();setTimeout(draw,150)};$('overlay').addEventListener('click',e=>{if(e.target===$('overlay'))reset()});document.addEventListener('keydown',e=>{if(e.key==='Escape')reset()});$('copy').onclick=async()=>{if(!currentResult)return;const value=language==='kr'?currentResult.promptKo:currentResult.promptEn;try{await navigator.clipboard.writeText(value);$('copy').textContent=translations[language].copied;setTimeout(()=>$('copy').textContent=translations[language].copy,1700)}catch(err){const input=document.createElement('textarea');input.value=value;document.body.appendChild(input);input.select();document.execCommand('copy');input.remove();$('copy').textContent=translations[language].copied}};
+let drawSequence=0;
+async function moveEjectedBall(x,y,size,rotation,duration,ease='ease-in-out'){
+  const ball=$('drawBall');
+  ball.style.transition=`left ${duration}ms ${ease},top ${duration}ms ${ease},transform ${duration}ms ${ease}`;
+  // Force layout so each step animates from its previous position.
+  void ball.offsetWidth;
+  ball.style.left=x+'px';ball.style.top=y+'px';
+  ball.style.transform=`translate(-50%,-50%) rotate(${rotation}deg) scale(${size})`;
+  await wait(duration+45);
+}
+async function draw(){
+  if(busy)return;
+  busy=true;
+  const seq=++drawSequence;
+  currentResult=prompts[Math.floor(Math.random()*prompts.length)];
+  renderResult(currentResult);
+  const color=colors[Math.floor(Math.random()*colors.length)];
+  $('dropCapsule').style.setProperty('--ball',color);
+  $('exitBall').style.setProperty('--ball',color);
+  $('drawBall').style.setProperty('--ball',color);
+  $('shell').style.setProperty('--ball',color);
+  const overlay=$('overlay'),ball=$('drawBall'),exit=$('exitBall');
+  overlay.classList.remove('show','focus');
+  $('ticket').classList.remove('show');$('shell').classList.remove('show');
+  $('loadingNote').classList.remove('show');
+  ball.classList.remove('visible','grow');ball.style.opacity='1';
+  ball.style.transition='none';
+  $('dropCapsule').classList.remove('falling');
+  exit.classList.remove('release');$('outputDoor').classList.remove('open');
+  $('pile').style.animation='none';
+  // Shake the capsules. A single ball visibly slips to the machine's feed chute.
+  void $('pile').offsetWidth;
+  $('pile').style.animation='shake .68s ease-in-out 2';
+  await wait(600);if(seq!==drawSequence)return;
+  $('dropCapsule').classList.add('falling');
+  await wait(1680);if(seq!==drawSequence)return;
+  // Mechanical hatch releases the ball from inside the opening, not the glass.
+  $('outputDoor').classList.add('open');
+  await wait(250);if(seq!==drawSequence)return;
+  exit.classList.add('release');
+  await wait(1170);if(seq!==drawSequence)return;
+  // Seamlessly continue with the exact same size/position from the hatch.
+  const hatch=exit.getBoundingClientRect();
+  overlay.classList.add('show');
+  const scene=overlay.querySelector('.scene').getBoundingClientRect();
+  const sx=hatch.left+hatch.width/2-scene.left;
+  const sy=hatch.top+hatch.height/2-scene.top;
+  ball.style.left=sx+'px';ball.style.top=sy+'px';
+  ball.style.transform='translate(-50%,-50%) rotate(68deg) scale(.635)';
+  ball.classList.add('visible');
+  exit.style.opacity='0';
+  await wait(100);if(seq!==drawSequence)return;
+  // Gravity, impact and two diminishing bounces onto the toy-shop floor.
+  const baseRect=$('machine').querySelector('.base').getBoundingClientRect();
+  const floorGlobal=Math.min(window.innerHeight-55,Math.max(baseRect.bottom+28,hatch.bottom+69));
+  const floor=floorGlobal-scene.top;
+  const rx=Math.min(window.innerWidth-60, hatch.left+hatch.width/2+68)-scene.left;
+  const x1=sx+(rx-sx)*.32,x2=sx+(rx-sx)*.65;
+  await moveEjectedBall(x1,floor, .65,120,1100,'cubic-bezier(.4,0,.87,.72)');if(seq!==drawSequence)return;
+  await moveEjectedBall(x2,floor-64,.65,175,570,'cubic-bezier(.12,.6,.35,1)');if(seq!==drawSequence)return;
+  await moveEjectedBall(rx,floor,.67,235,630,'cubic-bezier(.42,0,.8,.8)');if(seq!==drawSequence)return;
+  await moveEjectedBall(rx+6,floor-24,.67,263,370,'ease-out');if(seq!==drawSequence)return;
+  await moveEjectedBall(rx+10,floor,.67,290,380,'ease-in');if(seq!==drawSequence)return;
+  await wait(480);if(seq!==drawSequence)return;
+  // Only after it lands does the SAME ball enlarge smoothly towards the viewer.
+  overlay.classList.add('focus');
+  await moveEjectedBall(scene.width/2,scene.height/2,2.35,360,2800,'cubic-bezier(.22,.7,.2,1)');if(seq!==drawSequence)return;
+  await wait(250);if(seq!==drawSequence)return;
+  ball.style.opacity='0';$('shell').classList.add('show');
+  await wait(1950);if(seq!==drawSequence)return;
+  $('ticket').classList.add('show');
+  $('pile').style.animation='none';
+}
+function reset(){++drawSequence;$('overlay').classList.remove('show','focus');$('drawBall').classList.remove('visible','grow');$('drawBall').style.opacity='1';$('shell').classList.remove('show');$('ticket').classList.remove('show');$('dropCapsule').classList.remove('falling');$('exitBall').classList.remove('release');$('exitBall').style.opacity='0';$('outputDoor').classList.remove('open');$('pile').style.animation='none';busy=false;progress=angle=0;knobHandle.style.transition='transform 350ms ease-out';rotateHandle(0)}
+</script>
+<!-- AD DATA ONLY: 아래 목록에 {"ko":"표시할 제목", "en":"ENGLISH TITLE"} 행을 추가하면 됩니다. -->
+<script id="bubble-ad-titles" type="application/json">
+[
+  {
+    "ko": "내가 아직 만나지 못한 나",
+    "en": "THE UNBORN ME"
+  },
+  {
+    "ko": "용감한 나",
+    "en": "THE BRAVE ME"
+  },
+  {
+    "ko": "창작하는 나",
+    "en": "THE CREATIVE ME"
+  },
+  {
+    "ko": "자유로운 나",
+    "en": "THE FREE ME"
+  }
+]
+</script>
+<script id="bubble-ad-engine">
+/* BACKGROUND BUBBLES ONLY. Does not read or modify the gacha animation. */
+(() => {
+  'use strict';
+  const root = document.getElementById('bubble-ad-layer');
+  const dataNode = document.getElementById('bubble-ad-titles');
+  if (!root || !dataNode) return;
+  let titles;
+  try { titles = JSON.parse(dataNode.textContent); }
+  catch (err) { console.warn('Bubble title JSON error:', err); return; }
+  titles = titles.filter(item => item && typeof item.ko === 'string' && item.ko.trim());
+  if (!titles.length) return;
+  const pastel = [
+    ['rgba(98,205,255,.36)','rgba(97,185,255,.66)'],
+    ['rgba(250,146,193,.38)','rgba(255,126,187,.63)'],
+    ['rgba(185,152,255,.37)','rgba(176,146,255,.65)'],
+    ['rgba(109,240,183,.36)','rgba(113,211,187,.63)'],
+    ['rgba(255,232,117,.4)','rgba(249,195,73,.67)']
+  ];
+  const rand = (a,b) => a+Math.random()*(b-a);
+  const pick = arr => arr[Math.floor(Math.random()*arr.length)];
+  const nowLanguage = () => document.getElementById('en')?.classList.contains('active') ? 'en' : 'ko';
+  const titleText = item => (nowLanguage()==='en' ? (item.en || item.ko) : item.ko).trim();
+  let previous = -1;
+  const active = new Set();
+  const minScreen = () => Math.min(window.innerWidth,window.innerHeight);
+  let stopped = false;
+  function spawn() {
+    if (stopped || document.hidden) return;
+    const w = window.innerWidth;
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    const max = w < 600 ? 5 : (w < 1000 ? 7 : 10);
+    if (active.size >= max) return;
+    const bubbleSize = w < 600 ? rand(67,118) : rand(90,178);
+    const zone = Math.random() < .5 ? 'left' : 'right';
+    // Stay mostly in the margins, behind rather than over the main gacha.
+    const marginWidth = Math.max(20, Math.min(w*.28, w/2 - 100));
+    let x;
+    if (w < 600) {
+      x = zone === 'left' ? rand(-bubbleSize*.32, Math.max(10,marginWidth-bubbleSize*.32)) : rand(w-marginWidth-bubbleSize*.55,w-bubbleSize*.55);
+    } else {
+      x = zone === 'left' ? rand(-bubbleSize*.25,Math.max(5,marginWidth-bubbleSize*.3)) : rand(w-marginWidth-bubbleSize*.7,w-bubbleSize*.7);
+    }
+    const yMin = w < 600 ? 215 : 35;
+    const y = rand(yMin, Math.max(yMin+50,h-bubbleSize*.75));
+    let index = Math.floor(rand(0,titles.length));
+    if (titles.length>1 && index === previous) index=(index+1+Math.floor(rand(0,titles.length-1)))%titles.length;
+    previous=index;
+    const item=titles[index];
+    const [tint,rim] = pick(pastel);
+    const float = document.createElement('div');
+    float.className='bb-float';
+    float.dataset.ko=item.ko;
+    float.dataset.en=item.en || item.ko;
+    float.style.cssText = `width:${bubbleSize}px;height:${bubbleSize}px;left:${x}px;top:${y}px;--bb-x:${rand(-80,80).toFixed(0)}px;--bb-y:${(w < 600 ? rand(-35,-100) : rand(-100,-260)).toFixed(0)}px;--bb-duration:${rand(11000,20000).toFixed(0)}ms;--bb-tint:${tint};--bb-rim:${rim};--bb-type-size:${Math.max(10,Math.min(15,bubbleSize*.12)).toFixed(0)}px`;
+    const shell=document.createElement('div');
+    shell.className='bb-shell';
+    const label=document.createElement('span');
+    label.className='bb-title';
+    label.textContent=titleText(item);
+    shell.appendChild(label);float.appendChild(shell);
+    root.appendChild(float); active.add(float);
+    let removed=false;
+    function remove() { if (removed) return; removed=true; active.delete(float); float.remove(); }
+    function pop() {
+      if (removed || shell.classList.contains('bb-popping')) return;
+      shell.classList.add('bb-popping');
+      for(let i=0;i<6;i++) {
+        const spark=document.createElement('i');spark.className='bb-spark';
+        const angle=(i/6)*Math.PI*2+rand(-.25,.25),radius=rand(23,65);
+        spark.style.setProperty('--sx',Math.cos(angle)*radius+'px');
+        spark.style.setProperty('--sy',Math.sin(angle)*radius+'px');
+        float.appendChild(spark);
+      }
+      setTimeout(remove,650);
+    }
+    // Independent random burst times: not all bubbles reach the top first.
+    setTimeout(pop, rand(4500,12300));
+    setTimeout(remove,21300);
+  }
+  function updateLanguage() {
+    for(const node of active){
+      const label=node.querySelector('.bb-title');
+      if(label) label.textContent=nowLanguage()==='en' ? node.dataset.en : node.dataset.ko;
+    }
+  }
+  for(const button of [document.getElementById('en'),document.getElementById('kr')]) {
+    button?.addEventListener('click',updateLanguage);
+  }
+  // Show the first few without a long blank interval, then replenish randomly.
+  [250,950,1850,2900].forEach(delay=>setTimeout(spawn,delay));
+  (function loop(){
+    if(stopped) return;
+    setTimeout(()=>{spawn();loop();},rand(1200,2600));
+  })();
+  window.addEventListener('pagehide',()=>{stopped=true;active.forEach(node=>node.remove());active.clear();},{once:true});
+})();
+</script>
+</body></html>
